@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Анализ текста
+{% endblock %}
+
+{%block content%}
+<!--<h2 id="file-input">Шаг 1: выбор файла<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#file-input" style="padding-left: 0.375em;"></a></h2>-->
+<!--<div class="bd-example">-->
+<!--  <div class="mb-3">-->
+<!--    <label for="formFile" class="form-label">Выберите файл в формате csv</label>-->
+<!--    <input class="form-control" type="file" id="formFile">-->
+<!--  </div>-->
+<!--</div>-->
+  <form method="post">
+    {% csrf_token %}
+    {{ form.text }}
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" >Обработать</button>
+    <br>
+  </form>
+
+{% endblock %}
